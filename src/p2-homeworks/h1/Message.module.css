@@ -1,3 +1,71 @@
 .message {
+    width: 300px;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    min-height: 40px;
+}
 
+.avatar {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 0;
+    z-index: 2;
+}
+
+.avatar img {
+    outline: 1px solid black;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.textBox {
+    margin-left: 50px;
+    background-color: #002201;
+    border-radius: 5px 5px 5px 0;
+    padding: 10px 55px 15px 20px;
+    position: relative;
+}
+
+.textBox::after, .textBox::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -25px;
+    bottom: 0;
+}
+
+.textBox::after {
+    border-radius: 0 0 10px 0;
+    background-color: #A8E700;
+    z-index: 1;
+}
+
+.textBox::before {
+    background-color: #002201;
+    z-index: 0;
+}
+
+.name {
+    font-size: 16px;
+    color: #8C84AB;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 16px;
+    color: white;
+    line-height: 20px;
+}
+
+.time {
+    position: absolute;
+    font-size: 16px;
+    right: 15px;
+    bottom: 5px;
+    color: #274A29;
+    font-weight: bold;
 }

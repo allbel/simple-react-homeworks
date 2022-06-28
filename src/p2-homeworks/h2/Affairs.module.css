@@ -1,3 +1,11 @@
 .someClass {
+    padding: 10px
+}
 
+.someClass div {
+    padding: 5px
+}
+
+.someClass div button {
+    margin-left: 5px;
 }

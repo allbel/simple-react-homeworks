@@ -1,7 +1,19 @@
-.someClass {
+.boxInput {
+    margin-left: 15px;
+}
 
+.boxInput button {
+    margin-left: 10px;
+}
+
+.boxInput span {
+    margin-left: 10px;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.errorText {
+    color: red;
 }

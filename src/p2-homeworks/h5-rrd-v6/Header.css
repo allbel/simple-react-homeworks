@@ -1,0 +1,42 @@
+.boxLink {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    left: -210px;
+    transition: left .5s;
+}
+
+.boxLink::after {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: #274A29;
+    border-radius: 50%;
+    vertical-align: bottom;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.boxLink:hover {
+    left: 0;
+}
+
+.boxLink:hover::after {
+    background-color: lime;
+}
+
+.boxLink a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #4830F0;
+}
+
+.boxLink a:hover {
+    color: red;
+}
+
+.boxLink .active {
+    color: red;
+}

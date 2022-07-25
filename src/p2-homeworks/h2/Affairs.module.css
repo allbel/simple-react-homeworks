@@ -6,6 +6,10 @@
     padding: 5px
 }
 
-.someClass div button {
+.someClass button {
     margin-left: 5px;
+}
+
+.select {
+    background-color: lightcoral;
 }

@@ -5,6 +5,7 @@ import css from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
+    filter: FilterType
     setFilter: (filter: FilterType) => void
     deleteAffairCallback: (_id: number) => void
 }
@@ -28,10 +29,10 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <button className={props.filter === 'all' ? css.select : ''} onClick={setAll}>All</button>
+            <button className={props.filter === 'high' ? css.select : ''} onClick={setHigh}>High</button>
+            <button className={props.filter === 'middle' ? css.select : ''} onClick={setMiddle}>Middle</button>
+            <button className={props.filter === 'low' ? css.select : ''} onClick={setLow}>Low</button>
         </div>
     )
 }

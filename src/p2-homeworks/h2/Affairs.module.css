@@ -8,6 +8,7 @@
 
 .someClass button {
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .select {

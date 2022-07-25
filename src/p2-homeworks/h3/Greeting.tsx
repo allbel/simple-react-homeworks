@@ -24,7 +24,11 @@ const Greeting: React.FC<GreetingPropsType> = (
                 onKeyDown={addUserKeyDown}
                 className={inputClass}
             />
-            <button onClick={addUser} disabled={!name}>add</button>
+            <button
+                onClick={addUser}
+                disabled={!name}
+                style={{cursor: !name ? 'auto' : 'pointer'}}
+            >add</button>
             <span>{totalUsers}</span>
             <div className={s.errorText}>{error}</div>
         </div>

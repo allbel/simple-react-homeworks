@@ -10,7 +10,7 @@ function HW6() {
         saveState<string>('editable-span-value', value)
     }
     const restore = () => {
-        // setValue()
+        setValue(restoreState<string>('editable-span-value', value))
     }
 
     return (
@@ -19,7 +19,7 @@ function HW6() {
             homeworks 6
 
             {/*should work (должно работать)*/}
-            <div>
+            <div style={{marginLeft:'20px'}}>
                 <SuperEditableSpan
                     value={value}
                     onChangeText={setValue}

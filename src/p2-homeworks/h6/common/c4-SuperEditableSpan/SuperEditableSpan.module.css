@@ -1,0 +1,10 @@
+.span {
+    color: lightcoral;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.span::before {
+    content: '\270E';
+    margin-right: 5px;
+}

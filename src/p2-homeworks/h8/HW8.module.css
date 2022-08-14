@@ -1,0 +1,13 @@
+.box {
+    margin-left: 20px;
+}
+
+.list > div {
+    margin-left: 5px;
+    max-width: 260px;
+    overflow: hidden;
+}
+
+.list span:last-child {
+    float: right;
+}

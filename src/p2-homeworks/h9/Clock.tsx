@@ -1,46 +1,47 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './Clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
+    const [date, setDate] = useState<Date>(new Date())
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        window.clearInterval(timerId)
     }
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        // show
+        if (show === false) setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        if (show === true) setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const wrapInZero = (d: number) => d < 10 ? '0' + d : d
+
+    const stringTime = `${wrapInZero(date.getHours())}:${wrapInZero(date.getMinutes())}:${wrapInZero(date.getSeconds())}` // fix with date
+
+    const stringDate = `${wrapInZero(date.getDate())}.${wrapInZero(date.getMonth() + 1)}.${date.getFullYear()}` // fix with date
 
     return (
-        <div>
+        <div className={s.box}>
             <div
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
                 {stringTime}
             </div>
-
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
+            <div className={s.boxDate}>
+                {show && stringDate}
+            </div>
 
             <SuperButton onClick={start}>start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>

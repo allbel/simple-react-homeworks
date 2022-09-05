@@ -1,0 +1,9 @@
+.value1Box {
+    display: inline-block;
+    width: 30px;
+    padding-left: 20px;
+}
+
+.value2Box {
+    margin-left: 20px;
+}

@@ -6,7 +6,7 @@ import HW10 from "../../h10/HW10";
 import HW11 from "../../h11/HW11";
 import HW12 from "../../h12/HW12";
 
-function PreJunior() {
+function Junior() {
     return (
         <div>
             <HW7/>
@@ -19,4 +19,4 @@ function PreJunior() {
     )
 }
 
-export default PreJunior
+export default Junior
